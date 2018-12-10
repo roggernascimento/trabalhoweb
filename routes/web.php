@@ -11,6 +11,16 @@
 |
 */
 
+Route::get('/livro/listar', 'Livro@listar');
+Route::get('/livro/adicionar', 'Livro@adicionar');
+
+Route::get('/autor/listar', 'Autor@listar');
+Route::get('/autor/adicionar', 'Autor@adicionar');
+
+
+
+
+
 Route::get('/home', 'Album@listar');
 
 Route::get('/sobre', function () {
