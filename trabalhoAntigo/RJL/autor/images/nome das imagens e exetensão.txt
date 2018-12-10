@@ -1,0 +1,10 @@
+livro-aberto_318-61778.jpg
+
+esboco-de-calendario_318-8692.jpg
+
+
+
+comandos extras:
+
+label for="Nasc">Data de Nascimento do Autor:</label>
+    <input type="date" id="Nasc" name="Nasc" required>
