@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Set-2018 às 20:37
+-- Generation Time: 02-Out-2018 às 21:33
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -41,9 +41,10 @@ CREATE TABLE `autores` (
 --
 
 INSERT INTO `autores` (`id`, `nome`, `sobrenome`, `nacionalidade`, `data_nasc`) VALUES
-(0, 'joe', 'joe', 'joe', '2018-09-04'),
-(1, 'Friedrich', 'Nietzsche', 'alemão', '1844-10-15'),
-(2, NULL, 'joe', 'baiano', '1119-09-11');
+(1, 'William', 'Shakespeare', ' ingles', '1564-05-26'),
+(2, 'Fernando', 'Pessoa', 'portugues', '1888-06-13'),
+(3, 'Edward', 'O. Wilson', 'Americano', '1929-06-10'),
+(4, 'Sephen', 'King', 'americano', '1947-09-21');
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,8 @@ CREATE TABLE `autor_livros` (
 --
 
 INSERT INTO `autor_livros` (`id`, `id_autor`, `id_livro`) VALUES
-(1, 1, 1);
+(1, 3, 15),
+(2, 4, 16);
 
 -- --------------------------------------------------------
 
@@ -98,7 +100,15 @@ CREATE TABLE `editora` (
 --
 
 INSERT INTO `editora` (`id`, `descricao`) VALUES
-(1, 'companhia das letras');
+(1, 'companhia das letras'),
+(2, 'Vivaluz'),
+(3, 'Autêntica'),
+(4, 'Malagueta'),
+(5, 'Judá Editora'),
+(6, 'Nova Alexandria'),
+(7, 'Mercuryo'),
+(8, 'Rafael Copetti Editor'),
+(9, 'Lúmen Editorial');
 
 -- --------------------------------------------------------
 
@@ -120,7 +130,7 @@ CREATE TABLE `funcionarios` (
 
 CREATE TABLE `genero` (
   `id` int(11) NOT NULL,
-  `descricao` varchar(15) NOT NULL
+  `descricao` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -128,7 +138,15 @@ CREATE TABLE `genero` (
 --
 
 INSERT INTO `genero` (`id`, `descricao`) VALUES
-(1, 'filosofia');
+(1, 'filosofia'),
+(2, 'literatura'),
+(3, 'terror'),
+(4, 'ficção'),
+(5, 'romance'),
+(6, 'drama'),
+(7, 'poesia'),
+(8, 'literatura infantl'),
+(9, 'HQ');
 
 -- --------------------------------------------------------
 
@@ -152,7 +170,7 @@ CREATE TABLE `livros` (
   `id` int(11) NOT NULL,
   `titulo` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `datapub` date NOT NULL,
-  `resumo` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `resumo` varchar(400) COLLATE utf8_unicode_ci NOT NULL,
   `id_genero` int(11) NOT NULL,
   `id_editora` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -162,14 +180,8 @@ CREATE TABLE `livros` (
 --
 
 INSERT INTO `livros` (`id`, `titulo`, `datapub`, `resumo`, `id_genero`, `id_editora`) VALUES
-(4, NULL, '1844-10-15', 'a gaia ciÃªncia', 1, 1),
-(6, NULL, '2018-09-04', 'xxxx', 1, 1),
-(7, 'xxxxx', '2018-09-04', 'xxxxx', 1, 1),
-(8, 'xxxxx', '2018-09-04', 'xxxxx', 1, 1),
-(9, 'Ã ', '2018-09-04', '', 1, 1),
-(11, 'Ã³Ã³Ã³Ã³', '2018-09-10', 'jkl', 1, 1),
-(12, 'óóóó', '0000-00-00', '', 1, 1),
-(13, 'Ã¡Ã¡Ã¡Ã¡Ã¡', '2018-09-13', 'Â´fgsfgs', 1, 1);
+(15, 'O sentido da existencia humana', '2018-09-17', 'O livro articula ciencias e humanidades na tentativa de unir a Teologia e a Ciencia.', 1, 1),
+(16, 'O  Pistoleiro', '1982-06-10', 'e uma das obras de maior importancia do cultuado escritor norte-americano Stephen King, primeiro da serie A Torre Negra.', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -277,38 +289,44 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT for table `autores`
+--
+ALTER TABLE `autores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `autor_livros`
 --
 ALTER TABLE `autor_livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `editora`
 --
 ALTER TABLE `editora`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `genero`
 --
 ALTER TABLE `genero`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
 --
-
---
--- Limitadores para a tabela `autor_livros`
---
-ALTER TABLE `autor_livros`
-  ADD CONSTRAINT `fk_id_autor` FOREIGN KEY (`id_autor`) REFERENCES `autores` (`id`);
 
 --
 -- Limitadores para a tabela `inventario`
@@ -329,7 +347,7 @@ ALTER TABLE `livros`
 ALTER TABLE `movimentacao`
   ADD CONSTRAINT `id.funcionario` FOREIGN KEY (`id_funcionario`) REFERENCES `funcionarios` (`id`),
   ADD CONSTRAINT `id.inventario` FOREIGN KEY (`id_inventario`) REFERENCES `inventario` (`id`),
-  ADD CONSTRAINT `id.usuario` FOREIGN KEY (`id_aluno`) REFERENCES `usuario` (`id`);
+  ADD CONSTRAINT `id.livro` FOREIGN KEY (`id_livro`) REFERENCES `livros` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
