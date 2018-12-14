@@ -21,3 +21,6 @@ class Livro extends Controller
     return view('livro', ['livro' => $livro, 'lista_livros' => $lista_livros]);
     }
 }
+
+
+
