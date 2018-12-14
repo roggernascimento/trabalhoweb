@@ -39,7 +39,6 @@ Route::get('/', function () {
     return view('paginaprincipal');
 });
 
-
 Route::get('/home', 'Album@listar');
 
 Route::get('/sobre', function () {
