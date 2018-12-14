@@ -15,10 +15,5 @@ if (isset($_POST['cadastrar'])) {
     $modelo->adicionar($author);
 
 }
-//listar usuario em uma tabela
-$modelo= new ModelAuthor(); 
-$author= $modelo->listar();
-
-//var_dump($author);
 
 ?>

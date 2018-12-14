@@ -14,16 +14,9 @@ if (isset($_POST['cadastrar'])) {
 //    $book->setId_autores($_POST['id_autores']);
     $book->setId_genero($_POST['id_genero']);
     $book->setId_editora($_POST['id_editora']);
-    
+    var_dump($_POST);
     $modelo->adicionar($book);
 
 }
-
-//listar usuario em uma tabela
-$modelo= new ModelBook(); 
-$book = $modelo->listar();
-
-//var_dump($book);
-
 
 ?>

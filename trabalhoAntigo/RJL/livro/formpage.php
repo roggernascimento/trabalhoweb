@@ -18,7 +18,7 @@
             <div id="form-main">
                 <div id="form-div">
                     <form class="montform" method="post" action="" id="reused_form" >
-                        <p class="titulo">
+                        <p class="tit">
                             <input name="titulo" type="text" class="feedback-input" required placeholder="Título" id="titulo" />
                         </p>
 <!--
@@ -29,8 +29,8 @@
 			'				  <p class="data">
                             <input name="datapub" type="date" class="feedback-input" required placeholder="Data De Publicação" id="data" />
                         </p>
-                        <p class="resumo">
-                            <textarea name="resumo" class="feedback-input" id="resumo" placeholder="Resumo Do Livro"></textarea>
+                        <p class="text">
+                            <textarea name="resumo" class="feedback-input" id="comment" placeholder="Resumo Do Livro"></textarea>
                         </p>
                         
 <!--
@@ -68,38 +68,7 @@ Desculpe, houve um erro ao enviar seu formulário.
                     <div id="success_message" style="width:100%; height:100%; display:none; "> <h2>
 Sucesso! Sua mensagem foi enviada com sucesso.</h2> </div>
                 </div>
-                
             </div>
-            
-      <table class="table table-dark" style="background-color: white;width: 100%;position: fixed;top: 813px;">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">titulo</th>
-          <th scope="col">datapub</th>
-          <th scope="col">resumo</th>
-          <th scope="col">id_genero</th>
-          <th scope="col">id_editora</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <?php  foreach (  $book as $u )  {  ?>
-            <tr>
-              <th scope="row"><?php echo $u["id"];   ?></th>
-              <td><?php echo $u["titulo"];   ?></td>
-              <td> <?php echo $u["datapub"];?>  </td>
-              <td> <?php echo $u["resumo"];?>  </td>
-              <td> <?php echo $u["id_genero"];?>  </td>
-              <td> <?php echo $u["id_editora"];?>  </td>
-
-            </tr>
-        <?php } ?>
-
-
-      </tbody>
-      </table>
-    </div>
-        
+        </div>
     </body>
 </html>

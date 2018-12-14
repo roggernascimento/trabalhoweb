@@ -62,65 +62,48 @@ body
 
 
 /* Icons ---------------------------------- */
-.montform  #nome{
-	background-image: url(images/autor.png);
+.montform  #titulo{
+	background-image: url(images/livro-aberto_318-61778.jpg);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
-.montform  #nome:focus{
-	background-image: url(images/autor.png);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-   background-position: 11px 8px;
-    background-repeat: no-repeat;
-}
-
-.montform  #sobrenome{
-	background-image: url(images/autor.png);
-	background-size: 30px 30px;
-	background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
-.montform  #sobrenome:focus{
-	background-image: url(images/autor.png);
+.montform  #titulo:focus{
+	background-image: url(images/livro-aberto_318-61778.jpg);
 	background-size: 30px 30px;
 	background-position: 8px 5px;
   background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 
-
- .montform  #nacionalidade{
-	background-image: url(images/nacionalidade.jpg);
+.montform  #autor{
+	background-image: url(images/Icon.png);
 	background-size: 30px 30px;
-	background-position: 8px 5px;
-   background-position: 11px 8px;
-	background-repeat: no-repeat;
-} 
-.montform  #nacionalidade:focus{
-	background-image: url(images/nacionalidade.jpg);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-   background-position: 11px 8px;
+	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
- .montform  #data{
+.montform  #autor:focus{
+	background-image: url(images/Icon.png);
+	background-size: 30px 30px;
+    background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+}
+.montform  #data{
 	background-image: url(images/esboco-de-calendario_318-8692.jpg);
 	background-size: 30px 30px;
-	background-position: 8px 5px;
-   background-position: 11px 8px;
+	background-position: 11px 8px;
 	background-repeat: no-repeat;
-} 
-		
+}
+
 .montform  #data:focus{
 	background-image: url(images/esboco-de-calendario_318-8692.jpg);
 	background-size: 30px 30px;
 	background-position: 8px 5px;
-   background-position: 11px 8px;
+  background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 

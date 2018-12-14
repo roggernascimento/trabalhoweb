@@ -37,7 +37,6 @@ body
   
 }
 
-
 .montform .feedback-input {
 	color:#3c3c3c;
 	font-family: Helvetica, Arial, sans-serif;
@@ -78,62 +77,30 @@ body
     background-repeat: no-repeat;
 }
 
+.montform  #autor{
+	background-image: url(images/Icon.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
 
+.montform  #autor:focus{
+	background-image: url(images/Icon.png);
+	background-size: 30px 30px;
+    background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+}
 .montform  #data{
 	background-image: url(images/esboco-de-calendario_318-8692.jpg);
 	background-size: 30px 30px;
-	background-position: 8px 5px;
-  background-position: 11px 8px;
+	background-position: 11px 8px;
 	background-repeat: no-repeat;
-} 
+}
+
 .montform  #data:focus{
 	background-image: url(images/esboco-de-calendario_318-8692.jpg);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
- .montform  #resumo{
-	background-image: url(images/resumo.jpg);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-} 
-.montform  #resumo:focus{
-	background-image: url(images/resumo.jpg);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
-
- .montform  #genero{
-	background-image: url(images/genero.png);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-} 
-.montform  #genero:focus{
-	background-image: url(images/genero.png);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
- .montform  #editora{
-	background-image: url(images/editora.png);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-} 
-.montform  #editora:focus{
-	background-image: url(images/editora.png);
 	background-size: 30px 30px;
 	background-position: 8px 5px;
   background-position: 11px 8px;
