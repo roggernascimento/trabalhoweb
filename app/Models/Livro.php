@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Mon, 17 Dec 2018 17:23:41 +0000.
+ * Date: Mon, 17 Dec 2018 18:34:30 +0000.
  */
 
 namespace App\Models;
@@ -14,13 +14,18 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * 
  * @property int $id
  * @property string $titulo
- * @property string $ediçao
+ * @property int $id_autores
+ * @property \Carbon\Carbon $datapub
+ * @property string $resumo
+ * @property int $id_genero
+ * @property int $id_editora
+ * @property bool $destaque
  * 
- * @property \Illuminate\Database\Eloquent\Collection $exemplars
- * @property \Illuminate\Database\Eloquent\Collection $generos
- * @property \Illuminate\Database\Eloquent\Collection $autores
- * @property \Illuminate\Database\Eloquent\Collection $prateleiras
- * @property \Illuminate\Database\Eloquent\Collection $reservas
+ * @property \App\Models\Autore $autore
+ * @property \App\Models\Editora $editora
+ * @property \App\Models\Genero $genero
+ * @property \Illuminate\Database\Eloquent\Collection $inventarios
+ * @property \Illuminate\Database\Eloquent\Collection $movimentacaos
  *
  * @package App\Models
  */
@@ -30,36 +35,49 @@ class Livro extends Eloquent
 	public $timestamps = false;
 
 	protected $casts = [
-		'id' => 'int'
+		'id' => 'int',
+		'id_autores' => 'int',
+		'id_genero' => 'int',
+		'id_editora' => 'int',
+		'destaque' => 'bool'
+	];
+
+	protected $dates = [
+		'datapub'
 	];
 
 	protected $fillable = [
 		'titulo',
-		'ediçao'
+		'id_autores',
+		'datapub',
+		'resumo',
+		'id_genero',
+		'id_editora',
+		'destaque'
 	];
 
-	public function exemplars()
+	public function autore()
 	{
-		return $this->hasMany(\App\Models\Exemplar::class, 'id_livros');
+		return $this->belongsTo(\App\Models\Autore::class, 'id_autores');
 	}
 
-	public function generos()
+	public function editora()
 	{
-		return $this->belongsToMany(\App\Models\Genero::class, 'genero_livro', 'id_livros', 'id_generos');
+		return $this->belongsTo(\App\Models\Editora::class, 'id_editora');
 	}
 
-	public function autores()
+	public function genero()
 	{
-		return $this->belongsToMany(\App\Models\Autore::class, 'livros_autores', 'id_livros', 'id_autores');
+		return $this->belongsTo(\App\Models\Genero::class, 'id_genero');
 	}
 
-	public function prateleiras()
+	public function inventarios()
 	{
-		return $this->belongsToMany(\App\Models\Prateleira::class, 'prateleira_livros', 'id_livros', 'id_prateleira');
+		return $this->hasMany(\App\Models\Inventario::class, 'id_livros');
 	}
 
-	public function reservas()
+	public function movimentacaos()
 	{
-		return $this->hasMany(\App\Models\Reserva::class, 'id_livros');
+		return $this->hasMany(\App\Models\Movimentacao::class, 'id_livro');
 	}
 }

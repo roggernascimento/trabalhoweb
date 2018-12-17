@@ -10,20 +10,19 @@ namespace App\Models;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Autore
+ * Class Usuario
  * 
  * @property int $id
  * @property string $nome
- * @property string $sobrenome
- * @property string $nacionalidade
- * @property \Carbon\Carbon $data_nasc
+ * @property string $email
  * 
- * @property \Illuminate\Database\Eloquent\Collection $livros
+ * @property \Illuminate\Database\Eloquent\Collection $movimentacaos
  *
  * @package App\Models
  */
-class Autore extends Eloquent
+class Usuario extends Eloquent
 {
+	protected $table = 'usuario';
 	public $incrementing = false;
 	public $timestamps = false;
 
@@ -31,19 +30,13 @@ class Autore extends Eloquent
 		'id' => 'int'
 	];
 
-	protected $dates = [
-		'data_nasc'
-	];
-
 	protected $fillable = [
 		'nome',
-		'sobrenome',
-		'nacionalidade',
-		'data_nasc'
+		'email'
 	];
 
-	public function livros()
+	public function movimentacaos()
 	{
-		return $this->hasMany(\App\Models\Livro::class, 'id_autores');
+		return $this->hasMany(\App\Models\Movimentacao::class, 'id_aluno');
 	}
 }

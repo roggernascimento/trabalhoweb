@@ -10,7 +10,7 @@ namespace App\Models;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Genero
+ * Class Editora
  * 
  * @property int $id
  * @property string $descricao
@@ -19,9 +19,9 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  *
  * @package App\Models
  */
-class Genero extends Eloquent
+class Editora extends Eloquent
 {
-	protected $table = 'genero';
+	protected $table = 'editora';
 	public $timestamps = false;
 
 	protected $fillable = [
@@ -30,6 +30,6 @@ class Genero extends Eloquent
 
 	public function livros()
 	{
-		return $this->hasMany(\App\Models\Livro::class, 'id_genero');
+		return $this->hasMany(\App\Models\Livro::class, 'id_editora');
 	}
 }
