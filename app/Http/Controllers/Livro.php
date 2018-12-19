@@ -3,23 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Livro as LivroModel;
 
 class Livro extends Controller
 {
     public function listar(){
             
-    $livro = [
-        'nome' => 'Assim falou Zaratustra'
-    ];
+    $lista_livros =
+        LivroModel::orderBy('titulo', 'edição')->paginate(10);
     
-    $lista_livros = [
-        ['nome' => 'Assim falou Zaratustra'],
-        ['nome' => 'A gaia ciência'],
-        ['nome' => 'Humano, demasiado humano']     
-    ];
-    
-    return view('livro', ['livro' => $livro, 'lista_livros' => $lista_livros]);
+    return view('livro_listar', [
+        'lista_livros' => $lista_livros
+        ]);
     }
+       
+    public function adicionar(){
+    
+        return view('livro_adicionar');
+  }
 }
 
 
