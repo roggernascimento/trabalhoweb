@@ -34,23 +34,24 @@ background-color: #CDC1A7;
 color: #993300;
 }
 </style>
+        
 </head>
-
+    
 <body>
+   
 <table>
   <tr>
-    <th>Título</th>
-    <th>Data de Publicação</th> 
+    <th>Nome</th>
   </tr>
  
-        <?php foreach(  $lista_livros    as  $l ) {  ?>
+        <?php foreach(  $lista_autores    as  $l ) {  ?>
         <tr>
-            <?php echo '<td>'.$l['titulo'].'</td>'; echo '<td>'.$l['ediçao'].'</td>'; ?>
+            <?php echo '<td>'.$l['nome'].'</td>'; ?>
          </tr>
         <?php 
             }
         ?>
 </table>
-
-</body>
-</html>
+    
+     </body>
+    </html>

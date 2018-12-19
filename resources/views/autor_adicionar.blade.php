@@ -22,7 +22,7 @@
                     <h1> Adicionar Livros</h1>
                     <form class="montform" method="post" action="" id="reused_form" >
                         <p class="tit">
-                            <input name="titulo" type="text" class="feedback-input" required placeholder="Título" id="titulo" />
+                            <input name="titulo" type="text" class="feedback-input" required placeholder="Nome" id="nome" />
                         </p>
 <!--
                         <p class="autor">
@@ -30,7 +30,7 @@
                         </p>
 -->
 			'				  <p class="data">
-                            <input name="datapub" type="date" class="feedback-input" required placeholder="Edição" id="data" />
+                            <input name="datapub" type="text" class="feedback-input" required placeholder="Sobrenome" id="sobrenome" />
                         </p>
             
 							  
