@@ -10,7 +10,7 @@ class Livro extends Controller
     public function listar(){
             
     $lista_livros =
-        LivroModel::orderBy('titulo', 'edição')->paginate(10);
+        LivroModel::orderBy('titulo', 'datapub')->paginate(10);
     
     return view('livro_listar', [
         'lista_livros' => $lista_livros

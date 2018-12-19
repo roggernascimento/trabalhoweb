@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    @yield('css_page)
-    <title>@yield('titulo')</title> 
+    <title></title> 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" >
 </head>
 <body>
