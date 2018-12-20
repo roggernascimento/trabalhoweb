@@ -7,10 +7,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Formulário De Livros</title>
+        <title>Formulário De Autores</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href=" {{ asset('css/form.css ')}}" />
+        <link rel="stylesheet" href=" {{ asset('css/formautor.css ')}}" />
 
     </head>
     <body >
@@ -19,20 +19,12 @@
             <div id="form-main">
                 
                 <div id="form-div">
-                    <h1> Adicionar Livros</h1>
+                    <h1> Adicionar Autores</h1>
                     <form class="montform" method="post" action="" id="reused_form" >
                         <p class="tit">
-                            <input name="titulo" type="text" class="feedback-input" required placeholder="Nome" id="nome" />
+                            <input name="titulo" type="text" class="feedback-input" required placeholder="Nome Completo" id="nome" />
                         </p>
-<!--
-                        <p class="autor">
-                            <input name="id_autores" type="texto" required class="feedback-input" id="autor" placeholder="Nome Do Autor" />
-                        </p>
--->
-			'				  <p class="data">
-                            <input name="datapub" type="text" class="feedback-input" required placeholder="Sobrenome" id="sobrenome" />
-                        </p>
-            
+
 							  
                         <div class="submit">
                             <button name="cadastrar" type="submit" class="button-blue">Enviar</button>

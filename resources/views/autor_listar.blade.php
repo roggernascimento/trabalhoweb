@@ -7,13 +7,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Formulário De Livros</title>
+        <title>Listagem de Autores</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href=" {{ asset('css/form.css ')}}" />
+        <link rel="stylesheet" href=" {{ asset('css/formautor.css ')}}" />
 
 <style type='text/css'>
 table {
+
 width: 15%;
 border: 5px solid #C5B798;
 margin-top: 15px;
