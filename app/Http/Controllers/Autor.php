@@ -23,4 +23,3 @@ class Autor extends Controller
   }
 }
 
-
