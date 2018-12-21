@@ -1,5 +1,4 @@
 <?php 
-    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,7 +29,7 @@
                         </p>
 -->
 			'				  <p class="data">
-                            <input name="datapub" type="text" class="feedback-input" required placeholder="Edição" id="data" />
+                            <input name="datapub" type="date" class="feedback-input" required placeholder="Edição" id="data" />
                         </p>
             
 							  

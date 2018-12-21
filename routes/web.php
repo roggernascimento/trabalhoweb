@@ -32,8 +32,8 @@ https://stackoverflow.com/questions/44839648/no-application-encryption-key-has-b
 Route::get('/livro/listar', 'Livro@listar');
 Route::get('/livro/adicionar', 'Livro@adicionar');
 
-Route::get('/autor/listar', 'Autor@listar');
-Route::get('/autor/adicionar', 'Autor@adicionar');
+Route::get('/autores/listar', 'Autor@listar');
+Route::get('/autores/adicionar', 'Autor@adicionar');
 
 
 Route::get('/', function () {

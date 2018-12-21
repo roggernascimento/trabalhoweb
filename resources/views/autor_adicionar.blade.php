@@ -10,7 +10,11 @@
         <title>Formulário De Autores</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<<<<<<< HEAD
         <link rel="stylesheet" href=" {{ asset('css/form.css ')}}" />
+=======
+        <link rel="stylesheet" href=" {{ asset('css/formautor.css ')}}" />
+>>>>>>> 4e95d8d920ee90c23ae948ad9e765df61fe647ef
 
     </head>
     <body >
@@ -19,6 +23,7 @@
             <div id="form-main">
                 
                 <div id="form-div">
+<<<<<<< HEAD
                     <h1> Adicionar autor</h1>
                     <form class="montform" method="post" action="" id="reused_form" >
                         <p class="name">
@@ -33,6 +38,14 @@
                             <input name="sobrenome" type="text" class="feedback-input" required placeholder="Sobrenome" id="nome" />
                         </p>
             
+=======
+                    <h1> Adicionar Autores</h1>
+                    <form class="montform" method="post" action="" id="reused_form" >
+                        <p class="tit">
+                            <input name="titulo" type="text" class="feedback-input" required placeholder="Nome Completo" id="nome" />
+                        </p>
+
+>>>>>>> 4e95d8d920ee90c23ae948ad9e765df61fe647ef
 							  
                         <div class="submit">
                             <button name="cadastrar" type="submit" class="button-blue">Enviar</button>
