@@ -20,6 +20,9 @@ class Autor extends Controller
     
     return view('autor', ['autor' => $autor, 'lista_autores' => $lista_autores]);
     }
+    public function adicionar(){
     
+        return view('autor_adicionar');
+  }
     
 }

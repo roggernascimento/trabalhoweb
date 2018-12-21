@@ -28,6 +28,7 @@ https://stackoverflow.com/questions/44839648/no-application-encryption-key-has-b
 
 
 
+
 Route::get('/livro/listar', 'Livro@listar');
 Route::get('/livro/adicionar', 'Livro@adicionar');
 

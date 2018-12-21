@@ -5,20 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class Album extends Controller
+    
 {
+    
     public function listar(){
             
     $usuario = [
-        'nome' => 'Shara',
-        'sobrenome' => 'Alves'
+        'nome' => 'Biblioteca',
+        'sobrenome' => 'RJL'
     ];
     
     $usuarios = [
-        ['nome' => 'Vitor'],
-        ['nome' => 'Wellington'],
-        ['nome' => 'Ronaldo']     
+        ['nome' => 'Lucas'],
+        ['nome' => 'Roger'],
+        ['nome' => 'Jarom']     
     ];
     
     return view('welcome', ['usuario' => $usuario, 'lista_usuarios' => $usuarios]);
     }
+    
 }
+    
