@@ -17,15 +17,7 @@ class Autor extends Controller
     }
     public function adicionar(){
     
-<<<<<<< HEAD
-        return view('autor_adicionar');
-  }
-=======
-       
-    public function adicionar(){
->>>>>>> 4e95d8d920ee90c23ae948ad9e765df61fe647ef
-    
+
         return view('autor_adicionar');
   }
 }
-
